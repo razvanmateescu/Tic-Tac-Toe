@@ -1,0 +1,17 @@
+Pentru a calcula tabelele corespunzatoare tuturor fiilor nodului initial m-am folosit de functii recursive
+care creeaza toate nodurile pana cand matricea este completata in totalitate. Se poate ca jocul sa fie
+castigat inainte de ocuparea tuturor spatiilor libere, ceea ce inseamna ca nu mai e nevoie sa creez 
+urmatoarele noduri care ar fi trebuit sa succeada celui care reprezinta finalul jocului.
+Am creat o functie prin care vad daca s-a terminat jocul. Cand jocul a fost terminat, campul "terminat"
+din struct tree are valoarea 1. De fiecare data verific daca jocul a fost terminat, pentru a sti daca 
+mai trebuie sa scriu urmatorii fii.
+Pentru a sti cati fii are un nod din arbore am numarat spatiile libere din matrice. Astfel numarul de 
+descendenti ai unui nod este reprezentat de numarul de posibilitati de ocupare a unui nou spatiu.
+Pentru a determina valoarea de adevar a unui nod, in functie de tipul de nod prezentat in enunt, am 
+verificat care sunt fii unde jocul este castigat de caracterul citit din fisier. Acel nod va avea 
+valoarea de adevar 1. 
+Daca un nod este de tip "si" atunci valoarea de adevar va fi 1 in cazul in care toti fii sai au valoarea 1.
+Un nod de tip "sau" este egal cu 1 daca exista cel putin un fiu in care are valoarea 1.
+Am parcurs recursiv pana am ajuns la frunze, unde pot sti valoarea de adevar a nodului respectiv.
+Apoi am determinat valoarile parintilor cum a fost prezentat in enunt.
+
